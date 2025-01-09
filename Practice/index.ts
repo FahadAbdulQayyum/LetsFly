@@ -5,7 +5,8 @@ type DataType = {
     Age: number,
     Gender: string,
     Occupation: string,
-    Address: AddressType
+    Address: AddressType,
+    FullName: () => string,
 }
 
 type AddressType = {
@@ -27,6 +28,9 @@ const data: DataType = {
         City: "",
         State: "",
         Zip: ""
+    },
+    FullName: function() {
+        return this.FirstName + " " + this.LastName;
     }
 };
 
@@ -43,4 +47,4 @@ data.Address = {
     Zip: "62701"
 };
 
-console.log("data...", data);
+console.log("data...", data, data.FullName());
