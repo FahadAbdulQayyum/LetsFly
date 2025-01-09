@@ -55,6 +55,12 @@ console.log("data...", data, data.FullName());
 
 // const myArray = Object.entries(data);
 
-const myArray = Object.keys(data);
+// const myArray = Object.keys(data);
 
-console.log("myArray...", myArray);
+// console.log("myArray...", myArray);
+
+const myArray = Object.entries(data);
+
+for(let [key, value] of myArray) {
+    console.log("key...", key, "value...", value);
+}
