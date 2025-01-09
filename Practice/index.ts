@@ -29,8 +29,8 @@ const data: DataType = {
         State: "",
         Zip: ""
     },
-    FullName: function() {
-        return this.FirstName + " " + this.LastName;
+    FullName: () => {
+        return data.FirstName + " " + data.LastName;
     }
 };
 
@@ -48,3 +48,10 @@ data.Address = {
 };
 
 console.log("data...", data, data.FullName());
+
+// const myArray = Object.values(data).filter(value => typeof value !== 'function');
+// const myArray = Object.values(data);
+// const myArray = Object.entries(data);
+const myArray = Object.keys(data);
+
+console.log("myArray...", myArray);
