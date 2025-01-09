@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    # command: nodemon --exec ts-node src/index.ts
+    command: nodemon --exec ts-node index.ts
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=development
